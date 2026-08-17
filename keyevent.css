@@ -1,0 +1,29 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-size:500% ;
+    background-position: -150px -500px;
+}
+
+#form{
+    width: 300px;
+    margin: 100px auto 0 auto;
+    border: 2px solid red;
+    border-radius: 15px;
+    padding: 25px;
+    background-color:blueviolet;
+    color: black;
+    box-shadow: -3px 3px 10px #000;
+
+}
+p.input{
+    font-size: 20px;
+
+}
+input{
+    width: 300px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: inset -3px 3px 10px #000; 
+
+}
