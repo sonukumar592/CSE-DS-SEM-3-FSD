@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-1</title>
+    <link rel="stylesheet" href="assignment1.css">
+</head>
+
+<body>
+
+    <div class="container" id="startPage">
+
+        <h1>QUIZZ</h1>
+
+        <form>
+
+            <label>Name : </label>
+            <input type="text" id="name">
+
+            <br><br>
+
+            <label>ROLL-NO : </label>
+            <input type="text" id="ROLLNO">
+
+            <br><br>
+
+            <label>Section : </label>
+
+            <input type="radio" id="cse-ds" name="Section" value="cse-ds">
+            <label for="cse-ds">cse-ds</label>
+
+            <input type="radio" id="cse-ai-ml" name="Section" value="cse-ai-ml">
+            <label for="cse-ai-ml">cse-ai-ml</label>
+
+            <input type="radio" id="other" name="Section" value="other">
+            <label for="other">Other</label>
+
+            <br><br>
+
+            <button type="button" onclick="startQuiz()">START QUIZ</button>
+
+        </form>
+
+    </div>
+
+    <div class="container" id="quizPage" style="display: none;">
+
+        <div class="question" id="q1">
+
+            <h2>1. What is event emitter?</h2>
+
+            <p id="timer1">Time: 01:00</p>
+
+            <label>
+                <input type="radio" name="q1" value="class"
+                    onchange="checkAnswer(this, 'q1')">
+                class
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="function"
+                    onchange="checkAnswer(this, 'q1')">
+                function
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="none"
+                    onchange="checkAnswer(this, 'q1')">
+                none
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="js function"
+                    onchange="checkAnswer(this, 'q1')">
+                js function
+            </label>
+
+            <br>
+
+            <button type="button" onclick="nextQuestion(1)">Next</button>
+
+        </div>
+
+        <div class="question" id="q2" style="display: none;">
+
+            <h2>2. What is the output of 10 % 3?</h2>
+
+            <p id="timer2">Time: 01:00</p>
+
+            <label>
+                <input type="radio" name="q2" value="1"
+                    onchange="checkAnswer(this, 'q2')">
+                1
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="2"
+                    onchange="checkAnswer(this, 'q2')">
+                2
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="3"
+                    onchange="checkAnswer(this, 'q2')">
+                3
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="0"
+                    onchange="checkAnswer(this, 'q2')">
+                0
+            </label>
+
+            <br>
+
+            <button type="button" onclick="nextQuestion(2)">Next</button>
+
+        </div>
+
+        <div class="question" id="q3" style="display: none;">
+
+            <h2>3. What is the output of (5+3)/2?</h2>
+
+            <p id="timer3">Time: 01:00</p>
+
+            <label>
+                <input type="radio" name="q3" value="1"
+                    onchange="checkAnswer(this, 'q3')">
+                1
+            </label>
+
+            <label>
+                <input type="radio" name="q3" value="2"
+                    onchange="checkAnswer(this, 'q3')">
+                2
+            </label>
+
+            <label>
+                <input type="radio" name="q3" value="4"
+                    onchange="checkAnswer(this, 'q3')">
+                4
+            </label>
+
+            <label>
+                <input type="radio" name="q3" value="0"
+                    onchange="checkAnswer(this, 'q3')">
+                0
+            </label>
+
+            <br>
+
+            <button type="button" onclick="nextQuestion(3)">Next</button>
+
+        </div>
+
+        <div class="question" id="q4" style="display: none;">
+
+            <h2>4. What is the output of (3*2+3)?</h2>
+
+            <p id="timer4">Time: 01:00</p>
+
+            <label>
+                <input type="radio" name="q4" value="5"
+                    onchange="checkAnswer(this, 'q4')">
+                5
+            </label>
+
+            <label>
+                <input type="radio" name="q4" value="6"
+                    onchange="checkAnswer(this, 'q4')">
+                6
+            </label>
+
+            <label>
+                <input type="radio" name="q4" value="9"
+                    onchange="checkAnswer(this, 'q4')">
+                9
+            </label>
+
+            <label>
+                <input type="radio" name="q4" value="7"
+                    onchange="checkAnswer(this, 'q4')">
+                7
+            </label>
+
+            <br>
+
+            <button type="button" onclick="nextQuestion(4)">Next</button>
+
+        </div>
+
+        <div class="question" id="q5" style="display: none;">
+
+            <h2>5. What is the output of 10 / 2?</h2>
+
+            <p id="timer5">Time: 01:00</p>
+
+            <label>
+                <input type="radio" name="q5" value="1"
+                    onchange="checkAnswer(this, 'q5')">
+                1
+            </label>
+
+            <label>
+                <input type="radio" name="q5" value="2"
+                    onchange="checkAnswer(this, 'q5')">
+                2
+            </label>
+
+            <label>
+                <input type="radio" name="q5" value="5"
+                    onchange="checkAnswer(this, 'q5')">
+                5
+            </label>
+
+            <label>
+                <input type="radio" name="q5" value="0"
+                    onchange="checkAnswer(this, 'q5')">
+                0
+            </label>
+
+            <br>
+
+            <button type="button" onclick="submitbutton()">Submit</button>
+
+        </div>
+
+        <div id="result" style="display: none;">
+
+            <h2>Quiz Result</h2>
+
+            <p id="score"></p>
+
+        </div>
+
+    </div>
+
+    <script src="assignment1.js"></script>
+
+</body>
+
+</html>
